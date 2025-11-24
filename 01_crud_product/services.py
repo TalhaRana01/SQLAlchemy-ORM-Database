@@ -12,3 +12,12 @@ def create_user(name: str, email:str):
     session.commit()
     session.refresh(user)
     return user
+  
+
+# Create Post
+def create_post(user_id: int, title: str, content:str):
+  with SessionLocal() as session:
+    post = Post(user_id=user_id, title=title, content=content)
+    session.add(post)
+    session.commit()
+    

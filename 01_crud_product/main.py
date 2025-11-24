@@ -5,4 +5,6 @@ from services import *
 
 
 # USERS Create user
-create_user("hammad ali", "example2@gmail.com")
+# create_user("hammad ali", "example2@gmail.com")
+
+create_post(1, "First post", "This is first post")
