@@ -62,4 +62,13 @@ def get_posts_by_user(user_id:int):
     user = session.get(User, user_id)
     posts = user.posts if user else []
     return posts
-    
+  
+# Delete Post
+
+def delete_post(post_id: int):
+  with SessionLocal() as session:
+    post = session.get(Post, post_id)
+    if post:
+      session.delete(post)
+      session.commit()
+      

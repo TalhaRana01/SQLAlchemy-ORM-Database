@@ -9,7 +9,7 @@ from services import *
 # print(Get_user_by_id(1))
 # print(get_all_user)
 
-update_user_email(1,"new_updated_eamil@gmail.com")
+# update_user_email(1,"new_updated_eamil@gmail.com")
 
 
 # POSTS
@@ -17,3 +17,4 @@ update_user_email(1,"new_updated_eamil@gmail.com")
 # print(Get_post_by_id(1))
 
 # print(get_posts_by_user(1))
+print(delete_post(3))
