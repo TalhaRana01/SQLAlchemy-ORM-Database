@@ -19,7 +19,7 @@ class User(Base):
   
   # ONE_TO_MANY : User to Post
   
-  posts = Mapped[list["Post"]] = relationship("Post", back_populates="user", cascade="all, delete")
+  posts : Mapped[list["Post"]] = relationship("Post", back_populates="user", cascade="all, delete")
   
   
   def __repr__(self) -> str:
@@ -42,5 +42,5 @@ class Post(Base):
   
 # Create Table
   
-def create_table():
-  Base.metadata.create_all()
+def create_tables():
+  Base.metadata.create_all(engine)
