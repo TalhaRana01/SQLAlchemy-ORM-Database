@@ -21,3 +21,10 @@ def create_post(user_id: int, title: str, content:str):
     session.add(post)
     session.commit()
     
+    
+# Get Single User
+def Get_user_by_id(user_id: int):
+  with SessionLocal() as session:
+    user = session.get_one(User, user_id)
+    return user
+    
